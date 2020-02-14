@@ -1,2 +1,2 @@
 # AWS-KAFKA-CLUSTER
-Create Messaging environment with Confluent Apache Kafka on AWS machine
+Create Messaging environment with Confluent Apache Kafka Multi broker on AWS machine

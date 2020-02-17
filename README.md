@@ -1,5 +1,5 @@
 # AWS-KAFKA-CLUSTER
-Create Messaging environment with Confluent Apache Kafka Multi broker on AWS machine
+Create Messaging environment with Apache Kafka Multi broker on AWS machine
 
 
 ## Create 1 Instance (t2.Xlarge) with the options
@@ -28,12 +28,12 @@ SSH               TCP             22          Anywhere
   * Install SSH
   * Install Java
 
-## 2. Step: Hadoop Installation and Configuration
-  * Install and Configure Hadoop NameNode and DataNode 
+## 2. Step: Kafka Installation and Configuration
+  * Install and Configure Kafka Multibroker 
   
-### 2.1 Step: Working with HDFS
-  * List files 
-  * Create directory
-  * copy files 
+### 2.1 Step: Working with KAFKA
+  *  
+  * 
+  *  
   
 

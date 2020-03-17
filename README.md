@@ -6,7 +6,7 @@ Create Messaging environment with Apache Kafka Multi broker on AWS machine
 * AMI: Amazon Linux 2 AMI (HVM), SSD Volume Type 64 bit
 * Network: vpc by default + No precense subnet + Public IP Use subnet  setting (enable)
 * Storage: Root disk 40 GB + Add Volume 200GB Magnetic (delete on termination)
-* Use security group created (ClsKafkaConfluent)
+* Use security group created (CslChongKafkaGroup)
 * Create or use new .pem key (copy this file in a secure place)
 
 ## Security

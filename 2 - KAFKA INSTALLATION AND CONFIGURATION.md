@@ -48,6 +48,7 @@ cp  server1.properties  server1.properties
 nano server.properties
 listeners=PLAINTEXT://ec2-3-17-3-207.us-east-2.compute.amazonaws.com:9092
 log.dir=/tmp/kafka-logs
+zookeeper.connect=localhost:2181
 ``` 
 
 * Edit Broker 1.Go to <KAFKA_HOME> installation and config folder.
@@ -56,6 +57,7 @@ nano server1.properties
 broker.id=1
 listeners=PLAINTEXT://ec2-3-17-3-207.us-east-2.compute.amazonaws.com:9093
 log.dir=/tmp/kafka-logs1
+zookeeper.connect=localhost:2181
 ``` 
 
 * Putting  zookeeper(kafka is managed by zookeeper) running background.Go to<KAFKA_HOME> installation 

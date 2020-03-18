@@ -2,6 +2,7 @@
 ### Tools
 * wget
 * nano
+* java
  
 ## Run in terminal
 

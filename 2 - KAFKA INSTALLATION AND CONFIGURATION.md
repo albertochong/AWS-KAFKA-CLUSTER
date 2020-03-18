@@ -14,7 +14,7 @@ wget https://archive.apache.org/dist/kafka/1.1.0/kafka_2.11-1.1.0.tgz
 tar -xvf kafka_2.11-1.1.0.tgz
 ```
 
-* move to folder opt/kafka and change ownner
+* move to folder opt/kafka 
 ```bash
 sudo mv kafka_2.11-1.1.0/ /opt/kafka 
 ```

@@ -25,15 +25,14 @@ SSH               TCP             22          Anywhere
 ## 1. Step: Install some tools
   * Install wget
   * Install nano
-  * Install SSH
   * Install Java
 
 ## 2. Step: Kafka Installation and Configuration
   * Install and Configure Kafka Multibroker 
   
 ### 2.1 Step: Working with KAFKA
-  *  Create Topic
-  * 
-  *  
+  *  Create,describe topic
+  *  Testing producer messages to the topic
+  *  Testing consumer messages from the topic
   
 

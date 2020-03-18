@@ -1,6 +1,6 @@
 
 # KAFKA MultiBroker Installation and Configuration
-Server with 2 brokers same server
+Cluster with 2 brokers in same server
 
 ### Run in terminal 
 

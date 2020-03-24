@@ -2,10 +2,28 @@
 # KAFKA MANAGEMENT TOOLS
 Here you can find some tools for cluster kafka management
 
-### http://www.kafkatool.com/features.html
+### KAFKATOOL - http://www.kafkatool.com/features.html
 
-* Download Kafka under home/hadoop directory
+* Download from web site and confire your cluster to see all information
+![alt text](https://achong.blob.core.windows.net/gitimages/kafkatool.PNG)
+
+
+### KAFDROP - https://github.com/obsidiandynamics/kafdrop
+
+* First install docker
 ```bash
-wget https://archive.apache.org/dist/kafka/1.1.0/kafka_2.11-1.1.0.tgz
+sudo yum install docker -y
 ```
+
+* Start the Docker Service
+```bash
+sudo service docker start
+```
+
+* Add the ec2-user to the docker group so you can execute Docker commands without using sudo.
+```bash
+sudo yum install docker -y
+```
+
+
 

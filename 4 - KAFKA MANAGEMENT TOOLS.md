@@ -15,6 +15,10 @@ Here you can find some tools for cluster kafka management
 sudo yum install docker -y
 ```
 
+sudo systemctl enable docker
+
+systemctl status docker
+
 * Start the Docker Service
 ```bash
 sudo service docker start
@@ -26,4 +30,10 @@ sudo yum install docker -y
 ```
 
 
+### KAFDROP - https://github.com/obsidiandynamics/kafdrop
+
+* First install docker
+```bash
+sudo yum install docker -y
+```
 

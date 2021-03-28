@@ -17,13 +17,13 @@ sudo apt-get install wget nano net-tools zip netcat tar
 
 * Create folder to Java and kafka Installation
 ```bash
-sudo mkdir /opt/Java
+sudo mkdir /opt/jdk
 sudo mkdir /opt/Kafka
 ```
 
 * Give previleges to user
 ```bash
-sudo chown -R ubuntu:ubuntu /opt/Java
+sudo chown -R ubuntu:ubuntu /opt/jdk
 sudo chown -R ubuntu:ubuntu /opt/Kafka
 ```
 

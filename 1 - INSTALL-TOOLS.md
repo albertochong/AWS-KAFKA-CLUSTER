@@ -1,21 +1,33 @@
-# Installing Tools 
+# Installing Tools in all instances
 ### Tools
-* wget
-* nano
-* java
- 
-## Run in terminal
-
 * Install wget
+* Install nano
+* Install net-tools
+* Install zip
+* Install netcat
+* Install tar
+* Install Java
+ 
+## Run in each terminal
+
+* Install all utilities
 ```bash
-sudo yum install rsync wget net-tools
+sudo apt-get install wget nano net-tools zip netcat tar
 ```
 
-* Install nano
+* Create folder to Java and kafka Installation
 ```bash
-sudo yum install nano
+sudo mkdir /opt/Java
+sudo mkdir /opt/Kafka
 ```
-    
+
+* Give previleges to user
+```bash
+sudo chown -R ubuntu:ubuntu /opt/Java
+sudo chown -R ubuntu:ubuntu /opt/Kafka
+```
+
+
 ## Install Java Virtual machine.Kafka needs jdk to work 
 ### Run in terminal
 

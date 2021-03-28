@@ -1,17 +1,17 @@
 
 # KAFKA MultiBroker Installation and Configuration
-Cluster with 2 brokers in same server
+Cluster with 3 brokers.
 
 ### Run in terminal 
 
 * Download Kafka under home/hadoop directory
 ```bash
-wget https://archive.apache.org/dist/kafka/1.1.0/kafka_2.11-1.1.0.tgz
+sudo wget https://archive.apache.org/dist/kafka/2.7.0/kafka_2.12-2.7.0.tgz
 ```
 
 * unpack files
 ```bash
-tar -xvf kafka_2.11-1.1.0.tgz
+tar -xvzf kafka_2.12-2.7.0.tgz
 ```
 
 * move to folder opt/kafka 

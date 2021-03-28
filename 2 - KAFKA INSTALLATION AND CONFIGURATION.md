@@ -1,8 +1,8 @@
 
-# KAFKA MultiBroker Installation and Configuration
+# Apache Kafka 2.7.0 MultiBroker Installation and Configuration
 Cluster with 3 brokers.
 
-### Run in terminal 
+### Run in terminal on each 6 isntances 
 
 * Download Kafka under home/hadoop directory
 ```bash
@@ -16,14 +16,14 @@ tar -xvzf kafka_2.12-2.7.0.tgz
 
 * move to folder opt/kafka 
 ```bash
-sudo mv kafka_2.11-1.1.0/ /opt/kafka 
+sudo mv kafka_2.12-2.7.0/ /opt/kafka 
 ```
 
-* Add kafka envirnoment variables under home/hadoop
+* Add kafka envirnoment variables 
 ```bash  
-nano .bash_profile
+nano .bashrc
  
-# KAFKA
+# Kafka 
 export KAFKA_HOME=/opt/kafka
 export PATH=$PATH:$KAFKA_HOME/bin
 ```     

@@ -51,5 +51,7 @@ CUSTOM TCP        TCP             8088        Anywhere
   *  Create Producer
   *  Create Consumer
   
-  
+## 3. Step: Kafka Monitoring
+  * Install and Configuring Prometheus
+  * Install and Configuring Grafana
 

@@ -1,5 +1,5 @@
 # AWS-KAFKA-CLUSTER
-Create Messaging environment with Apache Kafka Multi broker on AWS machine
+Create Messaging environment with Apache Kafka Multi broker on AWS machine with 3 zookeepers and 3 brokers in same zone.
 
 
 ## Create 6 Instances (t2.Xlarge) with the options
@@ -13,7 +13,7 @@ Create Messaging environment with Apache Kafka Multi broker on AWS machine
 
 ### Create a Security Group
 
-* Create new security group with the name: ClsChongNameNodeGroup
+* Create new security group with the name: ChongGroup
 ```bash
 Type              Protocol        Port        Source
 All Traffic       All             0 - 65535   Anywhere   

@@ -4,7 +4,7 @@ Cluster with 3 brokers.
 
 ### Run in terminal on each 6 instances 
 
-* Download Kafka under home/hadoop directory
+* Download Kafka 
 ```bash
 sudo wget https://archive.apache.org/dist/kafka/2.7.0/kafka_2.12-2.7.0.tgz
 ```
@@ -32,6 +32,20 @@ export PATH=$PATH:$KAFKA_HOME/bin
 ```bash   
 source .bashrc
 ``` 
+
+*  edit the hosts file.Add the following to the hosts entries on all servers. 
+```bash   
+sudo nano /etc/hosts
+172.31.22.104 zookeeper1
+172.31.31.206 zookeeper2
+172.31.22.176 zookeeper3
+``` 
+
+
+
+
+
+
 
 
 

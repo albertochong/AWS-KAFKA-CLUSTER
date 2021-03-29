@@ -15,7 +15,7 @@
 sudo apt-get install wget nano net-tools zip netcat tar
 ```
 
-* Create folder to Java and kafka Installation
+* Create folder to Java and kafka Installation, zookeeper data and logs
 ```bash
 sudo mkdir /opt/jdk
 sudo mkdir /opt/kafka

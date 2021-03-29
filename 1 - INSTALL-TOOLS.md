@@ -19,19 +19,12 @@ sudo apt-get install wget nano net-tools zip netcat tar
 ```bash
 sudo mkdir /opt/jdk
 sudo mkdir /opt/kafka
-sudo mkdir /opt/zookeeper
-sudo mkdir /opt/zookeeper/data
-sudo mkdir /opt/zookeeper/logs
 ```
 
 * Give previleges to user
 ```bash
 sudo chown -R ubuntu:ubuntu /opt/jdk
 sudo chown -R ubuntu:ubuntu /opt/kafka
-sudo chown -R ubuntu:ubuntu /opt/zookeeper
-sudo chown -R ubuntu:ubuntu /opt/zookeeper/data
-sudo chown -R ubuntu:ubuntu /opt/zookeeper/logs
-
 ```
 
 

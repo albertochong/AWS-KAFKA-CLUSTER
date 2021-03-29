@@ -2,7 +2,7 @@
 # Apache Kafka 2.7.0 MultiBroker Installation and Configuration
 Cluster with 3 brokers.
 
-### Run in terminal on each 6 isntances 
+### Run in terminal on each 6 instances 
 
 * Download Kafka under home/hadoop directory
 ```bash

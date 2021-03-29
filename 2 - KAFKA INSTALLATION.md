@@ -1,6 +1,6 @@
 
-# Apache Kafka 2.7.0 MultiBroker Installation and Configuration
-Cluster with 3 brokers.
+# Apache Kafka 2.7.0 Installation
+Cluster with 3 brokers and 3 zookeepers.
 
 ### Run in terminal on each 6 instances 
 
@@ -31,14 +31,6 @@ export PATH=$PATH:$KAFKA_HOME/bin
 * Renitialize/Activate
 ```bash   
 source .bashrc
-``` 
-
-*  edit the hosts file.Add the following to the hosts entries on all servers. 
-```bash   
-sudo nano /etc/hosts
-172.31.22.104 zookeeper1
-172.31.31.206 zookeeper2
-172.31.22.176 zookeeper3
 ``` 
 
 

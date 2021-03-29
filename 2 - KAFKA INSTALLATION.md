@@ -32,25 +32,3 @@ export PATH=$PATH:$KAFKA_HOME/bin
 ```bash   
 source .bashrc
 ``` 
-
-
-
-
-
-
-
-
-
-* Putting  zookeeper(kafka is managed by zookeeper) running background.Go to<KAFKA_HOME> installation 
-```bash 
-nohup bin/zookeeper-server-start.sh config/zookeeper.properties > logs/zookeeper.log &
-tail -f logs/zookeeper.log (show lasts lines)
-``` 
-
-* Putting all brokers running background. Go to <KAFKA_HOME> installation
-```bash 
-nohup bin/kafka-server-start.sh config/server.properties > logs/broker.log &
-nohup bin/kafka-server-start.sh config/server1.properties > logs/broker1.log &
-tail -f logs/broker.log (show lasts lines)
-tail -f logs/broker1.log (show lasts lines)
-``` 

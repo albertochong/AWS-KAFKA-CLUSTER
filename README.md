@@ -39,8 +39,10 @@ CUSTOM TCP        TCP             8088        Anywhere
   * Download Apache Kafka 2.7.0 
   * Create env variables
   
-### 2.1 Step: Install and Configure Zookeeper ensemble 3 nodes
-  *  XXXXXXXXXXX
+### 2.1 Step: Zookeeper Ensemble 3 nodes Configuration
+  *  Mock and add dns entries
+  *  Create data dictionary for zookeeper and log directory
+  *  
 
 ### 2.2 Step: Install and Configure 3 brokers
   *  XXXXXXXXXXX

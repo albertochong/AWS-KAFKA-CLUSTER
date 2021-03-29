@@ -35,19 +35,25 @@ CUSTOM TCP        TCP             8088        Anywhere
   * Install tar
   * Install Java
 
-## 2. Step: Apache Kafka 2.7.0 Installation and Configuration
-  * Install and Configure Zookeeper ensemble 3 nodes
-  * Install and Configure 3 brokers
+## 2. Step: Apache Kafka 2.7.0 Installation
+  * Download Apache Kafka 2.7.0 
+  * Create env variables
   
-### 2.1 Step: KAFKA Cluster Security
+### 2.1 Step: Install and Configure Zookeeper ensemble 3 nodes
   *  XXXXXXXXXXX
 
-### 2.2 Step: KAFKA Tests
+### 2.2 Step: Install and Configure 3 brokers
+  *  XXXXXXXXXXX
+
+### 2.3 Step: KAFKA Cluster Security
+  *  XXXXXXXXXXX
+
+### 2.4 Step: KAFKA Tests
   *  Create,describe topic
   *  Testing producer messages to the topic
   *  Testing consumer messages from the topic
 
-### 2.3 Step: KAFKA API Java Clients
+### 2.5 Step: KAFKA API Java Clients
   *  Create Producer
   *  Create Consumer
   

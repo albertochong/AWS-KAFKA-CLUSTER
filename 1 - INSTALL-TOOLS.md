@@ -1,4 +1,4 @@
-# Installing Tools in all instances
+# Installing Tools and Packages in all instances
 ### Tools
 * Install wget
 * Install nano
@@ -10,7 +10,7 @@
  
 ## Run in each terminal
 
-* Install all utilities
+* Install all 
 ```bash
 sudo apt-get install wget nano net-tools zip netcat tar
 ```

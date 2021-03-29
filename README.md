@@ -45,9 +45,15 @@ CUSTOM TCP        TCP             8088        Anywhere
   *  Edit the zookeeper.properties and set main properties to get up the cluster
   *  Create the file Myid to identify the nodes
   *  Configure zookeeper as service
+  *  Testing cluster comunication
 
 ### 2.2 Step: Install and Configure 3 brokers
-  *  XXXXXXXXXXX
+  *  Mock and add dns entries
+  *  Create data dictionary for zookeeper and transaction log directory
+  *  Edit the zookeeper.properties and set main properties to get up the cluster
+  *  Create the file Myid to identify the nodes
+  *  Configure zookeeper as service
+  *  Testing cluster comunication
 
 ### 2.3 Step: KAFKA Cluster Security
   *  XXXXXXXXXXX

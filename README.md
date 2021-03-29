@@ -41,7 +41,7 @@ CUSTOM TCP        TCP             8088        Anywhere
   
 ### 2.1 Step: Zookeeper Ensemble 3 nodes Configuration
   *  Mock and add dns entries
-  *  Create data dictionary for zookeeper and log directory
+  *  Create data dictionary for zookeeper and transaction log directory
   *  
 
 ### 2.2 Step: Install and Configure 3 brokers

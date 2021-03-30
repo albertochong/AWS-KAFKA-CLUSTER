@@ -50,7 +50,7 @@ CUSTOM TCP        TCP             8088        Anywhere
 ### 2.2 Step: 3 brokers Configuration
   *  Format 2 differents drives for data
   *  Mock and add dns entries to hosts file
-  *  
+  *  Edit the server.properties and set main properties to get up the cluster
   *  
   *  
   *  

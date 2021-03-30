@@ -56,7 +56,7 @@ CUSTOM TCP        TCP             8088        Anywhere
   *  
 
 ### 2.3 Step: KAFKA Cluster Security
-  *  XXXXXXXXXXX
+  *  TLS in Kafka
 
 ### 2.4 Step: KAFKA Tests
   *  Create,describe topic

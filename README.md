@@ -40,7 +40,7 @@ CUSTOM TCP        TCP             8088        Anywhere
   * Create env variables
   
 ### 2.1 Step: Zookeeper Ensemble 3 nodes Configuration
-  *  Mock and add dns entries
+  *  Mock and add dns entries to hosts file
   *  Create data dictionary for zookeeper and transaction log directory
   *  Edit the zookeeper.properties and set main properties to get up the cluster
   *  Create the file Myid to identify the nodes
@@ -49,7 +49,7 @@ CUSTOM TCP        TCP             8088        Anywhere
 
 ### 2.2 Step: 3 brokers Configuration
   *  Format 2 differents drives for data
-  *  
+  *  *  Mock and add dns entries to hosts file
   *  
   *  
   *  

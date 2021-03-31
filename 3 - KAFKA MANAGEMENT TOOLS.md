@@ -1,5 +1,5 @@
 
-# KAFKA MANAGEMENT TOOLS
+# Kafka Monitoring TOOLS
 Here you can find some tools for cluster kafka management
 
 ### KAFKATOOL - http://www.kafkatool.com/features.html

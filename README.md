@@ -15,15 +15,16 @@ Create Messaging environment with Apache Kafka Multi broker on AWS machine with 
 
 * Create new security group with the name: ChongGroup
 ```bash
-Type              Protocol        Port        Source
+Type              Protocol        Port        Source    Description
 All Traffic       All             0 - 65535   Anywhere   
-SSH               TCP             22          Anywhere
-CUSTOM TCP        TCP             2181        Anywhere
-CUSTOM TCP        TCP             2888        Anywhere
-CUSTOM TCP        TCP             3888        Anywhere
-CUSTOM TCP        TCP             9092        Anywhere
-CUSTOM TCP        TCP             8083        Anywhere
-CUSTOM TCP        TCP             8088        Anywhere
+SSH               TCP             22          Anywhere  Connection ssh
+CUSTOM TCP        TCP             2181        Anywhere  Zookeeper
+CUSTOM TCP        TCP             2888        Anywhere  Zookeeper
+CUSTOM TCP        TCP             3888        Anywhere  Zookeeper
+CUSTOM TCP        TCP             9092        Anywhere  Broker
+CUSTOM TCP        TCP             8083        Anywhere  Connect
+CUSTOM TCP        TCP             8088        Anywhere  Ksql
+CUSTOM TCP        TCP             8000        Anywhere  Prometheus
 ```
 
 ## 1. Step: Install some tools

@@ -33,15 +33,65 @@ curl broker1:8000
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/prometheus.PNG)
 
+
+#### Run in terminal on another machine
+###### References : https://prometheus.io/
+* Download and install prometheus as service
+```bash
+# testing from this machine if we can get data from agent/exporter installed ont he broker 
+curl 54.151.11.145:8000
+
+# create dir
+mkdir prometheus
+cd prometheus
+
+# Downlaod
+wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
+
+# Unpack
+tar -xzvf prometheus-2.26.0.linux-amd64.tar.gz
+
+# Edit configuration an add lines
+nano prometheus.yml
+################################################################################################
+scrape_configs:
+  - job_name: 'kafka'
+    static_configs:
+    - targets: 54.151.11.145:9090
+###############################################################################################
+
+# Setup Prometheus as service
+sudo nano /etc/systemd/system/prometheus.service
+###############################################################################################################
+
+[Unit]
+Description=Prometheus Server
+Documentation=https://prometheus.io/docs/introduction/overview/
+After=network-online.target
+
+[Service]
+User=ubuntu
+ExecStart=/home/ubuntu/prometheus/prometheus-2.26.0.linux-amd64 --config.file=/home/ubuntu/prometheus/prometheus-2.26.0.linux-amd64/prometheus.yml --storage.tsdb.path=/home/ubuntu/prometheus/prometheus-2.26.0.linux-amd64/data
+
+[Install]
+WantedBy=multi-user.target
+
+###############################################################################################################
+```
+
+* Reload, enable and start the service
+```bash
+sudo systemctl daemon-reload
+sudo systemctl start prometheus
+```
+
+
 ### Install and Configure Grafana
 ##### Run in terminal 
 
 * Edit the hosts file and add the following entries 
 ```bash
-sudo nano /etc/hosts
-172.31.22.104 zookeeper1
-172.31.31.206 zookeeper2
-172.31.22.176 zookeeper3
+
 ```
 ##### WEB : 
 

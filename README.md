@@ -57,6 +57,8 @@ CUSTOM TCP        TCP             8088        Anywhere
 
 ### 2.3 Step: KAFKA Cluster Security
   *  TLS in Kafka
+  *  Generate a Certificate Authority (CA)
+  *  SSL Setup in Broker
 
 ### 2.4 Step: KAFKA Tests
   *  Create,describe topic

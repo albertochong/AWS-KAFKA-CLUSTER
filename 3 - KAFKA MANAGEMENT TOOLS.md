@@ -6,6 +6,7 @@ By defautl Kafka give mettrics exposing JMX(Java Management)
 ### Install and Configure Prometheus 
 ###### References : https://github.com/prometheus/jmx_exporter
 ######              https://www.confluent.io/blog/monitor-kafka-clusters-with-prometheus-grafana-and-confluent/?mkt_tok=NTgyLVFIWC0yNjIAAAF8Hi4wNGl0q-            t3VaEYdXbWJ3R6HmPiTBhuCYUnAC8_UZtyx7bRV6p44p0LpoGYwIFIhQ2eHl3__PucX08sPLY4tU-jHVI4WZKuwiD4q-uAHVlO
+######              https://medium.com/@alvarobacelar/monitorando-um-cluster-kafka-com-ferramentas-open-source-a4032836dc79
                     
 #### Run in terminal on each broker instance
 
@@ -36,45 +37,76 @@ curl broker1:8000
 
 #### Run in terminal on another machine
 ###### References : https://prometheus.io/
-* Download and install prometheus as service
+
+* Edit the hosts file and add the following entries 
+```bash
+sudo nano /etc/hosts
+172.31.22.104 zookeeper1
+172.31.31.206 zookeeper2
+172.31.22.176 zookeeper3
+
+172.31.3.111  broker1
+172.31.5.198  broker2
+172.31.10.181 broker3
+```
+
+* Download and install prometheus Server as service
 ```bash
 # testing from this machine if we can get data from agent/exporter installed ont he broker 
-curl 54.151.11.145:8000
-
-# create dir
-mkdir prometheus
-cd prometheus
+curl broker1:8000
+curl broker2:8000
+curl broker3:8000
 
 # Downlaod
-wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
+wget https://github.com/prometheus/prometheus/releases/download/v2.12.0/prometheus-2.12.0.linux-amd64.tar.gz
 
 # Unpack
-tar -xzvf prometheus-2.26.0.linux-amd64.tar.gz
+-zxvf prometheus-2.12.0.linux-amd64.tar.gz /opt/
+
+
 
 # Edit configuration an add lines
-nano prometheus.yml
+sudo /opt/prometheus-2.12.0.linux-amd64/prometheus.yml
 ################################################################################################
+
+
 scrape_configs:
   - job_name: 'kafka'
     static_configs:
-    - targets: 54.151.11.145:9090
+    - targets: ['172.31.3.111:8000', '172.31.5.198:8000', '172.31.10.181:8000']
+
+
 ###############################################################################################
 
 # Setup Prometheus as service
 sudo nano /etc/systemd/system/prometheus.service
 ###############################################################################################################
 
-[Unit]
-Description=Prometheus Server
-Documentation=https://prometheus.io/docs/introduction/overview/
-After=network-online.target
 
 [Service]
-User=ubuntu
-ExecStart=/home/ubuntu/prometheus/prometheus-2.26.0.linux-amd64 --config.file=/home/ubuntu/prometheus/prometheus-2.26.0.linux-amd64/prometheus.yml --storage.tsdb.path=/home/ubuntu/prometheus/prometheus-2.26.0.linux-amd64/data
+Type=simple
+User=root
+Group=root
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart=/opt/prometheus-2.12.0.linux-amd64/prometheus --config.file=/opt/prometheus-2.12.0.linux-amd64/prometheus.yml --storage.tsdb.path=/op$
+LimitNOFILE=65000
+LockPersonality=true
+NoNewPrivileges=true
+MemoryDenyWriteExecute=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectHome=true
+RemoveIPC=true
+RestrictSUIDSGID=true
+ProtectSystem=full
+SyslogIdentifier=prometheus
+Restart=always
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.targe
+
+
+
 
 ###############################################################################################################
 ```
@@ -83,8 +115,11 @@ WantedBy=multi-user.target
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl start prometheus
+sudo systemctl status prometheus
 ```
+![alt text](https://achong.blob.core.windows.net/gitimages/prometheus_running.PNG)
 
+##### WEB : 
 
 ### Install and Configure Grafana
 ##### Run in terminal 

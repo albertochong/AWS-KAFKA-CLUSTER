@@ -1,1 +1,23 @@
 
+
+# Cluster Testing Tasks
+Operations tasks on the cluster.
+
+### Run in terminal on each 6 instances 
+
+* Create Topic and describe
+```bash
+kafka-topics.sh --bootstrap-server broker1:9092,broker2:9092,broker3:9092 --create --topic TpItauAgencia --replication-factor 3 --partitions 1
+```
+
+* unpack files
+```bash
+
+```
+
+* move to folder opt/kafka 
+```bash
+
+```
+
+

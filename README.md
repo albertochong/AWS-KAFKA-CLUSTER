@@ -24,7 +24,9 @@ CUSTOM TCP        TCP             3888        Anywhere  Zookeeper
 CUSTOM TCP        TCP             9092        Anywhere  Broker
 CUSTOM TCP        TCP             8083        Anywhere  Connect
 CUSTOM TCP        TCP             8088        Anywhere  Ksql
-CUSTOM TCP        TCP             8000        Anywhere  Prometheus
+CUSTOM TCP        TCP             8000        Anywhere  Prometheus Agent Jmx
+CUSTOM TCP        TCP             9090        Anywhere  Prometheus Server
+CUSTOM TCP        TCP             3000        Anywhere  Grafana
 ```
 
 ## 1. Step: Install some tools

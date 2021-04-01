@@ -84,19 +84,8 @@ sudo nano /etc/systemd/system/prometheus.service
 Type=simple
 User=root
 Group=root
-ExecReload=/bin/kill -HUP $MAINPID
 ExecStart=/opt/prometheus-2.12.0.linux-amd64/prometheus --config.file=/opt/prometheus-2.12.0.linux-amd64/prometheus.yml --storage.tsdb.path=/op$
 LimitNOFILE=65000
-LockPersonality=true
-NoNewPrivileges=true
-MemoryDenyWriteExecute=true
-PrivateDevices=true
-PrivateTmp=true
-ProtectHome=true
-RemoveIPC=true
-RestrictSUIDSGID=true
-ProtectSystem=full
-SyslogIdentifier=prometheus
 Restart=always
 
 [Install]
@@ -113,7 +102,9 @@ sudo systemctl status prometheus
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/prometheus_running.PNG)
 
-##### WEB : 
+##### WEB : http://18.144.123.83:9090/graph
+
+
 
 ### Install and Configure Grafana
 ##### Run in terminal 
@@ -122,7 +113,9 @@ sudo systemctl status prometheus
 ```bash
 
 ```
-##### WEB : http://18.144.123.83:9090/graph
+
+
+##### WEB : 
 
 
 

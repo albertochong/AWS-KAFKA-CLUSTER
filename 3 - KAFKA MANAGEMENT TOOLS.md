@@ -89,7 +89,7 @@ LimitNOFILE=65000
 Restart=always
 
 [Install]
-WantedBy=multi-user.targe
+WantedBy=multi-user.target
 
 ###############################################################################################################
 ```
@@ -102,7 +102,8 @@ sudo systemctl status prometheus
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/prometheus_running.PNG)
 
-##### WEB : http://18.144.123.83:9090/graph
+* Add prometheus as datasource in grafana
+![alt text](https://achong.blob.core.windows.net/gitimages/grafana_add_datasource.PNG)
 
 
 
@@ -142,7 +143,7 @@ WorkingDirectory=/opt/grafana-7.5.2
 ExecStart=/opt/grafana-7.5.2/bin/grafana-server
 
 [Install]
-WantedBy=multi-user.targe
+WantedBy=multi-user.target
 
 ###############################################################################################################
 ```
@@ -155,11 +156,11 @@ sudo systemctl status grafana
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/grafana.PNG)
 
-##### WEB : http://18.144.123.83:9090/graph
+##### WEB : http://18.144.123.83:3000
 
 
 
-### KAFKATOOL - http://www.kafkatool.com/features.html
+### KAFKATOOL - 
 
 ### ZOONAVIGATOR - 
 

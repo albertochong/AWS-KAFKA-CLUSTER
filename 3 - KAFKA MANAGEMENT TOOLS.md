@@ -18,7 +18,7 @@ wget https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0
 wget https://raw.githubusercontent.com/prometheus/jmx_exporter/master/example_configs/kafka-2_0_0.yml
 ```
 
-* Edit kafka service and add line to point to prometheus
+* Edit kafka service and add line to point to java agent
 ```bash
 sudo nano /etc/systemd/system/broker.service
 Environment="EXTRA_ARGS=-javaagent:/home/ubuntu/prometheus/jmx_prometheus_javaagent-0.15.0.jar=8000:/home/ubuntu/prometheus/kafka-2_0_0.yml"
@@ -28,7 +28,7 @@ sudo systemctl restart broker
 
 ```
 
-* Testing and checking
+* Testing and checking mettrics
 ```bash
 curl broker1:8000 
 ```

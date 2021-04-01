@@ -3,7 +3,7 @@
 Here you can find some tools for cluster kafka management and monitoring.
 By defautl Kafka give mettrics exposing JMX(Java Management)
 
-### Install and Configure Prometheus 
+### Install and Configure Agent JMX and Prometheus Server 
 ###### References : https://github.com/prometheus/jmx_exporter
 ######              https://www.confluent.io/blog/monitor-kafka-clusters-with-prometheus-grafana-and-confluent/?mkt_tok=NTgyLVFIWC0yNjIAAAF8Hi4wNGl0q-            t3VaEYdXbWJ3R6HmPiTBhuCYUnAC8_UZtyx7bRV6p44p0LpoGYwIFIhQ2eHl3__PucX08sPLY4tU-jHVI4WZKuwiD4q-uAHVlO
 ######              https://medium.com/@alvarobacelar/monitorando-um-cluster-kafka-com-ferramentas-open-source-a4032836dc79
@@ -35,7 +35,7 @@ curl broker1:8000
 ![alt text](https://achong.blob.core.windows.net/gitimages/prometheus.PNG)
 
 
-#### Run in terminal on another machine
+#### Run in terminal on another machine to install and configure Prometheus Server
 ###### References : https://prometheus.io/
 
 * Edit the hosts file and add the following entries 
@@ -61,7 +61,7 @@ curl broker3:8000
 wget https://github.com/prometheus/prometheus/releases/download/v2.12.0/prometheus-2.12.0.linux-amd64.tar.gz
 
 # Unpack
--zxvf prometheus-2.12.0.linux-amd64.tar.gz /opt/
+sudo tar -zxvf prometheus-2.12.0.linux-amd64.tar.gz /opt/
 
 # Edit configuration an add lines
 sudo /opt/prometheus-2.12.0.linux-amd64/prometheus.yml
@@ -107,15 +107,55 @@ sudo systemctl status prometheus
 
 
 ### Install and Configure Grafana
-##### Run in terminal 
+#### Run in terminal on another machine to install and configure Grafana
+###### References : https://grafana.com/
 
-* Edit the hosts file and add the following entries 
+
+* Download and install grafna Server as service
 ```bash
 
+# Downlaod
+wget https://dl.grafana.com/oss/release/grafana-7.5.2.linux-amd64.tar.gz
+
+# Unpack
+sudo tar -zxvf grafana-7.5.2.linux-amd64.tar.gz /opt/
+
+# Edit configuration an add lines
+sudo /opt/grafana-7.5.2/conf/defaults.ini
+################################################################################################
+
+
+
+
+
+###############################################################################################
+
+# Setup Grafana as service
+sudo nano /etc/systemd/system/grafana.service
+###############################################################################################################
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/opt/grafana-7.5.2
+ExecStart=/opt/grafana-7.5.2/bin/grafana-server
+
+[Install]
+WantedBy=multi-user.targe
+
+###############################################################################################################
 ```
 
+* Reload, enable and start the service
+```bash
+sudo systemctl daemon-reload
+sudo systemctl start grafana
+sudo systemctl status grafana
+```
+![alt text](https://achong.blob.core.windows.net/gitimages/grafana.PNG)
 
-##### WEB : 
+##### WEB : http://18.144.123.83:9090/graph
 
 
 

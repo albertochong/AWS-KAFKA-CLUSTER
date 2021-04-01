@@ -160,12 +160,16 @@ sudo systemctl status grafana
 ![alt text](https://achong.blob.core.windows.net/gitimages/grafana_add_datasource.PNG)
 
 ### Metrics
-CPU, JVM MEMORY, MESSAGES IN PER TOPIC, BYTES IN PER TOPIC, BYTES OUT PER TOPIC
+**CPU, JVM MEMORY, MESSAGES IN PER TOPIC, BYTES IN PER TOPIC, BYTES OUT PER TOPIC**
 ```bash
  1 - Import from https://grafana.com/grafana/dashboards/721 
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/kafka_overview.PNG)
 
+ 
+ 
+ 
+ 
  2 - 
  3 - 
  4 - 

@@ -63,8 +63,6 @@ wget https://github.com/prometheus/prometheus/releases/download/v2.12.0/promethe
 # Unpack
 -zxvf prometheus-2.12.0.linux-amd64.tar.gz /opt/
 
-
-
 # Edit configuration an add lines
 sudo /opt/prometheus-2.12.0.linux-amd64/prometheus.yml
 ################################################################################################
@@ -81,7 +79,6 @@ scrape_configs:
 # Setup Prometheus as service
 sudo nano /etc/systemd/system/prometheus.service
 ###############################################################################################################
-
 
 [Service]
 Type=simple
@@ -105,9 +102,6 @@ Restart=always
 [Install]
 WantedBy=multi-user.targe
 
-
-
-
 ###############################################################################################################
 ```
 
@@ -128,7 +122,7 @@ sudo systemctl status prometheus
 ```bash
 
 ```
-##### WEB : 
+##### WEB : http://18.144.123.83:9090/graph
 
 
 

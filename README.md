@@ -56,15 +56,17 @@ CUSTOM TCP        TCP             8000        Anywhere  Prometheus
   *  
   *  
 
-### 2.3 Step: KAFKA Cluster Security
+### 2.3 Step: KAFKA Tests
+  *  Create,describe topic
+  *  Testing producer messages to the topic
+  *  Testing consumer messages from the topic
+
+### 2.4 Step: KAFKA Cluster Security
   *  TLS in Kafka
   *  Generate a Certificate Authority (CA)
   *  SSL Setup in Broker
 
-### 2.4 Step: KAFKA Tests
-  *  Create,describe topic
-  *  Testing producer messages to the topic
-  *  Testing consumer messages from the topic
+
 
 ### 2.5 Step: KAFKA API Java Clients
   *  Create Producer

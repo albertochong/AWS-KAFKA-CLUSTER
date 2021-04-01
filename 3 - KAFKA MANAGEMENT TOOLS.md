@@ -102,8 +102,7 @@ sudo systemctl status prometheus
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/prometheus_running.PNG)
 
-* Add prometheus as datasource in grafana
-![alt text](https://achong.blob.core.windows.net/gitimages/grafana_add_datasource.PNG)
+##### WEB : http://18.144.123.83:9090
 
 
 
@@ -157,7 +156,8 @@ sudo systemctl status grafana
 ![alt text](https://achong.blob.core.windows.net/gitimages/grafana.PNG)
 
 ##### WEB : http://18.144.123.83:3000
-
+* Add prometheus as datasource in grafana
+![alt text](https://achong.blob.core.windows.net/gitimages/grafana_add_datasource.PNG)
 
 
 ### KAFKATOOL - 

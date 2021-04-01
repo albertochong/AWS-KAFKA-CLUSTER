@@ -159,12 +159,12 @@ sudo systemctl status grafana
 * Add prometheus as datasource in grafana
 ![alt text](https://achong.blob.core.windows.net/gitimages/grafana_add_datasource.PNG)
 
-Metrics
+### Metrics
+CPU, JVM MEMORY, MESSAGES IN PER TOPIC, BYTES IN PER TOPIC, BYTES OUT PER TOPIC
 ```bash
- What we have:
- 1 - Import from https://grafana.com/grafana/dashboards/721 : CPU, JVM MEMORY, MESSAGES IN PER TOPIC, BYTES IN PER TOPIC, BYTES OUT PER TOPIC
+ 1 - Import from https://grafana.com/grafana/dashboards/721 
      ![alt text](https://achong.blob.core.windows.net/gitimages/kafka_overview.PNG)
-
+```
  2 - 
  3 - 
  4 - 

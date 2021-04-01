@@ -159,6 +159,19 @@ sudo systemctl status grafana
 * Add prometheus as datasource in grafana
 ![alt text](https://achong.blob.core.windows.net/gitimages/grafana_add_datasource.PNG)
 
+Metrics
+```bash
+ What we have:
+ 1 - Import from https://grafana.com/grafana/dashboards/721 : CPU, JVM MEMORY, MESSAGES IN PER TOPIC, BYTES IN PER TOPIC, BYTES OUT PER TOPIC
+     ![alt text](https://achong.blob.core.windows.net/gitimages/kafka_overview.PNG)
+
+ 2 - 
+ 3 - 
+ 4 - 
+ 5 - 
+ 6 - 
+```
+
 
 ### KAFKATOOL - 
 
@@ -170,5 +183,5 @@ sudo systemctl status grafana
 
 ### YAHOO KAFKA MANAGER -
 
-### KAFDROP - https://github.com/obsidiandynamics/kafdrop
+### KAFDROP -
 

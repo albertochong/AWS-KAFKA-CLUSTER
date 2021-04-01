@@ -111,7 +111,7 @@ sudo systemctl status prometheus
 ###### References : https://grafana.com/
 
 
-* Download and install grafna Server as service
+* Download and install grafana Server as service
 ```bash
 
 # Downlaod
@@ -120,15 +120,6 @@ wget https://dl.grafana.com/oss/release/grafana-7.5.2.linux-amd64.tar.gz
 # Unpack
 sudo tar -zxvf grafana-7.5.2.linux-amd64.tar.gz /opt/
 
-# Edit configuration an add lines
-sudo /opt/grafana-7.5.2/conf/defaults.ini
-################################################################################################
-
-
-
-
-
-###############################################################################################
 
 # Setup Grafana as service
 sudo nano /etc/systemd/system/grafana.service

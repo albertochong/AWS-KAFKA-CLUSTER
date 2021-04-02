@@ -64,7 +64,7 @@ wget https://github.com/prometheus/prometheus/releases/download/v2.12.0/promethe
 sudo tar -zxvf prometheus-2.12.0.linux-amd64.tar.gz /opt/
 
 # Edit configuration an add lines
-sudo /opt/prometheus-2.12.0.linux-amd64/prometheus.yml
+sudo nano /opt/prometheus-2.12.0.linux-amd64/prometheus.yml
 ################################################################################################
 
 

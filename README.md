@@ -44,7 +44,7 @@ CUSTOM TCP        TCP             3000        Anywhere  Grafana
   
 ### 2.1 Step: Zookeeper Ensemble 3 nodes Configuration
   *  Mock and add dns entries to hosts file
-  *  Create data dictionary for zookeeper and transaction log directory
+  *  Create data dictionary for zookeeper and transaction log directory and give previleges
   *  Edit the zookeeper.properties and set main properties to get up the cluster
   *  Create the file Myid to identify the nodes
   *  Configure zookeeper as service
@@ -54,9 +54,8 @@ CUSTOM TCP        TCP             3000        Anywhere  Grafana
   *  Format 2 differents drives for data
   *  Mock and add dns entries to hosts file
   *  Edit the server.properties and set main properties to get up the cluster
-  *  
-  *  
-  *  
+  *  Testing comunication between brokers and zookeeper
+  *  Setup Broker as service
 
 ### 2.3 Step: KAFKA Tests
   *  Create,describe topic
@@ -71,8 +70,7 @@ CUSTOM TCP        TCP             3000        Anywhere  Grafana
 
 
 ### 2.5 Step: KAFKA API Java Clients
-  *  Create Producer
-  *  Create Consumer
+  *  Create Producer and Consumer
   
 ## 3. Step: Kafka Monitoring
   * Install and Configuring Prometheus

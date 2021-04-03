@@ -57,10 +57,9 @@ CUSTOM TCP        TCP             3000        Anywhere  Grafana
   *  Testing comunication between brokers and zookeeper
   *  Setup Broker as service
 
-### 2.3 Step: KAFKA Tests
+### 2.3 Step: KAFKA Tests basics operations
   *  Create,describe topic
   *  Testing producer messages to the topic
-  *  Testing consumer messages from the topic
 
 ### 2.4 Step: KAFKA Cluster Security
   *  TLS in Kafka

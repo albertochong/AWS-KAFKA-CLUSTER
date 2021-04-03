@@ -2,7 +2,7 @@
 Create environment with Apache Kafka Multi broker on AWS machine with 3 zookeepers and 3 brokers in same zone.
 
 
-## Create 6 Instances (t2.Xlarge) with the options
+## Create 6 Instances(3 Zookeepers, 3 borkers) (t2.Xlarge) with the options
 * AMI: Amazon Ubuntu 18.0.4 TLS AMI (HVM), SSD Volume Type 64 bit
 * Network: vpc by default + No precense subnet + Public IP Use subnet  setting (enable)
 * Storage: Root disk 40 GB + Add Volume 200GB Magnetic (delete on termination)

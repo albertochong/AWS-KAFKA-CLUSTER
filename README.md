@@ -1,5 +1,5 @@
 # AWS-KAFKA-CLUSTER
-Create Messaging environment with Apache Kafka Multi broker on AWS machine with 3 zookeepers and 3 brokers in same zone.
+Create environment with Apache Kafka Multi broker on AWS machine with 3 zookeepers and 3 brokers in same zone.
 
 
 ## Create 6 Instances (t2.Xlarge) with the options

@@ -146,7 +146,7 @@ sudo systemctl status grafana
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/grafana.PNG)
 
-##### WEB : http://18.144.123.83:3000
+
 * Add prometheus as datasource in grafana
 ![alt text](https://achong.blob.core.windows.net/gitimages/grafana_add_datasource.PNG)
 
@@ -159,25 +159,19 @@ sudo systemctl status grafana
 
  
  
- 
- 
- 2 - 
- 3 - 
- 4 - 
- 5 - 
- 6 - 
-```
+##### WEB : http://18.144.123.83:3000
 
 
-### KAFKATOOL - 
 
-### ZOONAVIGATOR - 
+### 1 - KAFKATOOL - 
 
-### KAFKA MANAGER - 
+### 2 - ZOONAVIGATOR - 
 
-### KAFKA MONITOR -
+### 3 - KAFKA MANAGER - 
 
-### YAHOO KAFKA MANAGER -
+### 4 - KAFKA MONITOR -
 
-### KAFDROP -
+### 5 - YAHOO KAFKA MANAGER -
+
+### 6 -  KAFDROP -
 

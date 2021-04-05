@@ -64,10 +64,7 @@ CUSTOM TCP        TCP             3000        Anywhere  Grafana
 ### 2.4 Step: KAFKA Cluster Security
   *  TLS in Kafka
   *  Generate a Certificate Authority (CA)
-  *  SSL Setup in Broker
-
-
-
+  
 ### 2.5 Step: KAFKA API Java Clients
   *  Create Producer and Consumer
   

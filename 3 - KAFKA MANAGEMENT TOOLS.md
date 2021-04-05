@@ -42,7 +42,7 @@ curl broker1:8000
 ```bash
 sudo nano /etc/hosts
 172.31.22.104 zookeeper1
-172.31.31.206 zookeeper2
+172.31.28.226 zookeeper2
 172.31.22.176 zookeeper3
 
 172.31.3.111  broker1

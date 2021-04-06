@@ -31,7 +31,9 @@ sudo systemctl restart broker
 
 * Testing and checking mettrics
 ```bash
-curl broker1:8000 
+curl broker1:8000
+curl broker2:8000 
+curl broker3:8000 
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/prometheus.PNG)
 

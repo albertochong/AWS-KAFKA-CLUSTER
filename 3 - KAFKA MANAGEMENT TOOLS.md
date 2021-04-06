@@ -7,10 +7,11 @@ By defautl Kafka give mettrics exposing JMX(Java Management)
 ###### References : https://github.com/prometheus/jmx_exporter
 ######              https://www.confluent.io/blog/monitor-kafka-clusters-with-prometheus-grafana-and-confluent/?mkt_tok=NTgyLVFIWC0yNjIAAAF8Hi4wNGl0q-            t3VaEYdXbWJ3R6HmPiTBhuCYUnAC8_UZtyx7bRV6p44p0LpoGYwIFIhQ2eHl3__PucX08sPLY4tU-jHVI4WZKuwiD4q-uAHVlO
 ######              https://medium.com/@alvarobacelar/monitorando-um-cluster-kafka-com-ferramentas-open-source-a4032836dc79
+###### https://github.com/confluentinc/cp-helm-charts/tree/master/grafana-dashboard
                     
 #### Run in terminal on each broker instance
 
-* Downlaod and Install JMX Export Agent 
+* Download and Install JMX Export Agent 
 ```bash
 mkdir prometheus
 cd prometheus
@@ -33,6 +34,35 @@ sudo systemctl restart broker
 curl broker1:8000 
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/prometheus.PNG)
+
+
+#### Run in terminal on each zookeeper instance
+
+* Download and Install JMX Export Agent 
+```bash
+mkdir prometheus
+cd prometheus
+wget https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.15.0/jmx_prometheus_javaagent-0.15.0.jar
+https://raw.githubusercontent.com/prometheus/jmx_exporter/master/example_configs/zookeeper.yaml
+```
+
+* Edit Zookeeper service and add line to point to java agent
+```bash
+sudo nano /etc/systemd/system/zookeeper.service
+Environment="EXTRA_ARGS=-javaagent:/home/ubuntu/prometheus/jmx_prometheus_javaagent-0.15.0.jar=7000:/home/ubuntu/prometheus/zookeeper.yaml"
+
+sudo systemctl daemon-reload
+sudo systemctl restart zookeeper
+
+```
+
+* Testing and checking mettrics
+```bash
+curl zookeeper1:7000
+curl zookeeper2:7000 
+curl zookeeper3:7000 
+```
+
 
 
 #### Run in terminal on another machine to install and configure Prometheus Server

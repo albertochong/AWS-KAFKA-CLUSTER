@@ -84,10 +84,14 @@ sudo nano /etc/hosts
 
 * Download and install prometheus Server as service
 ```bash
-# testing from this machine if we can get data from agent/exporter installed ont he broker 
-curl broker1:8000
+# testing from this machine if we can get data from agent/exporter installed on the broker and zookeeeper 
+curl broker1:8000 
 curl broker2:8000
 curl broker3:8000
+
+curl zookeeper1:7000
+curl zookeeper2:7000
+curl zookeeper3:7000
 
 # Downlaod
 wget https://github.com/prometheus/prometheus/releases/download/v2.12.0/prometheus-2.12.0.linux-amd64.tar.gz
@@ -103,8 +107,11 @@ sudo nano /opt/prometheus-2.12.0.linux-amd64/prometheus.yml
 scrape_configs:
   - job_name: 'kafka'
     static_configs:
-    - targets: ['172.31.3.111:8000', '172.31.5.198:8000', '172.31.10.181:8000'] #brokers
+    - targets: ['broker1:8000', 'broker2:8000', 'broker3:8000'] #brokers
 
+  - job_name: 'zookeeper'
+    static_configs:
+    - targets: ['zookeeper1:7000', 'zookeeper2:7000', 'zookeeper3:7000'] #zookeepers
 
 ###############################################################################################
 

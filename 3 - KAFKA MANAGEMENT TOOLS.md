@@ -5,9 +5,9 @@ By defautl Kafka give mettrics exposing JMX(Java Management)
 
 ### Install and Configure Agent JMX and Prometheus Server 
 ###### References : https://github.com/prometheus/jmx_exporter
-######              https://www.confluent.io/blog/monitor-kafka-clusters-with-prometheus-grafana-and-confluent/?mkt_tok=NTgyLVFIWC0yNjIAAAF8Hi4wNGl0q-            t3VaEYdXbWJ3R6HmPiTBhuCYUnAC8_UZtyx7bRV6p44p0LpoGYwIFIhQ2eHl3__PucX08sPLY4tU-jHVI4WZKuwiD4q-uAHVlO
-######              https://medium.com/@alvarobacelar/monitorando-um-cluster-kafka-com-ferramentas-open-source-a4032836dc79
-###### https://github.com/confluentinc/cp-helm-charts/tree/master/grafana-dashboard
+###### References : https://www.confluent.io/blog/monitor-kafka-clusters-with-prometheus-grafana-and-confluent/?mkt_tok=NTgyLVFIWC0yNjIAAAF8Hi4wNGl0q-            t3VaEYdXbWJ3R6HmPiTBhuCYUnAC8_UZtyx7bRV6p44p0LpoGYwIFIhQ2eHl3__PucX08sPLY4tU-jHVI4WZKuwiD4q-uAHVlO
+###### References : https://medium.com/@alvarobacelar/monitorando-um-cluster-kafka-com-ferramentas-open-source-a4032836dc79
+###### References : https://github.com/confluentinc/cp-helm-charts/tree/master/grafana-dashboard
                     
 #### Run in terminal on each broker instance
 

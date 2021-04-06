@@ -1,7 +1,7 @@
 
 # Kafka Administration and Monitoring TOOLS
 Here you can find some tools for cluster kafka management and monitoring.
-By defautl Kafka give mettrics exposing JMX(Java Management)
+By defautl Kafka give mettrics exposing JMX(Java Management Extensions)
 
 ### Install and Configure Agent JMX and Prometheus Server 
 ###### References : https://github.com/prometheus/jmx_exporter

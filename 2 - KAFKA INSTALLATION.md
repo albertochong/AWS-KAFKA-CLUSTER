@@ -4,6 +4,7 @@ Cluster with 3 brokers and 3 zookeepers.
 
 ### Run in terminal on each 6 instances 
 ###### References : https://kafka.apache.org/downloads
+###### References : https://kafka.apache.org/07/documentation.html
 
 * Download Kafka 
 ```bash

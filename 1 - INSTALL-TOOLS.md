@@ -8,7 +8,7 @@
 * Install tar
 * Install Java
  
-## Run in each terminal
+## Run in each 6 server terminal
 
 * Install all 
 ```bash

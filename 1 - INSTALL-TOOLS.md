@@ -15,18 +15,11 @@
 sudo apt-get install wget nano net-tools zip netcat tar
 ```
 
-* Create folder to Java and kafka Installation, zookeeper data and logs
+* Create folder to kafka Installation and give previleges to user
 ```bash
-sudo mkdir /opt/jdk
 sudo mkdir /opt/kafka
-```
-
-* Give previleges to user
-```bash
-sudo chown -R ubuntu:ubuntu /opt/jdk
 sudo chown -R ubuntu:ubuntu /opt/kafka
 ```
-
 
 ## Install Java Virtual machine.Kafka needs jdk to work 
 ### Run in terminal
@@ -43,34 +36,11 @@ sudo yum list java*
 sudo yum remove java*
 ``` 
 
-* (Download Java) under home/user directory
+* Install Java 
 ```bash 
-wget -c --content-disposition "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=239835_230deb18db3e4014bb8e3e8324f81b43"
+sudo apt-get update && sudo apt-get install -y openjdk-8-jdk
 ```
 
-* Unpack 
-```bash 
-sudo tar xzf java_package_name
-```
-
-*  Move folder jdk1.8.0_221 to opt/jdk
-```bash 
-sudo mv jdk1.8.0_221/ /opt/jdk
-```
-
-
-*  Edit .bashrc Under home/user directory to create envirnoment variable for java and add
-```bash 
-nano .bashrc
-  export JAVA_HOME=/opt/jdk
-  export JRE_HOME=/opt/jdk/jre
-  export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
-```
-
-* Reactive and update and read news environment variable
-```bash 
-source .bashrc
-```
 
 * To confirm java installation
 ```bash 

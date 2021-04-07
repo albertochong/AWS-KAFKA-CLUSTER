@@ -32,7 +32,7 @@ CUSTOM TCP        TCP             9090        Anywhere  Prometheus Server
 CUSTOM TCP        TCP             3000        Anywhere  Grafana
 ```
 
-## 1. Step: Install some tools [https://www.google.com]
+## 1. Step: Install some tools 
   * Install wget
   * Install nano
   * Install net-tools

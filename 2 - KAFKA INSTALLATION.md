@@ -3,7 +3,7 @@
 Cluster with 3 brokers and 3 zookeepers.
 
 ### Run in terminal on each 6 instances 
-###### References : https://github.com/prometheus/jmx_exporter
+###### References : https://kafka.apache.org/
 
 * Download Kafka 
 ```bash

@@ -45,7 +45,7 @@ curl broker3:8000
 mkdir prometheus
 cd prometheus
 wget https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.15.0/jmx_prometheus_javaagent-0.15.0.jar
-https://raw.githubusercontent.com/prometheus/jmx_exporter/master/example_configs/zookeeper.yaml
+wget https://raw.githubusercontent.com/prometheus/jmx_exporter/master/example_configs/zookeeper.yaml
 ```
 
 * Edit Zookeeper service and add line to point to java agent

@@ -193,6 +193,7 @@ sudo systemctl status grafana
 **CPU, JVM MEMORY, MESSAGES IN PER TOPIC, BYTES IN PER TOPIC, BYTES OUT PER TOPIC**
 ```bash
  1 - Import from https://grafana.com/grafana/dashboards/721 
+ 2 - Import from https://github.com/confluentinc/cp-helm-charts/tree/master/grafana-dashboard
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/kafka_overview.PNG)
 

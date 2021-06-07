@@ -197,9 +197,55 @@ sudo systemctl status grafana
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/kafka_overview.PNG)
 
- 
- 
 ##### WEB : http://18.144.123.83:3000
+
+### Perform rolling restart of brokers
+#### Install and Configure Agent JMX Jolokia 
+###### References : https://jolokia.org/download.html
+
+![alt text](https://achong.blob.core.windows.net/gitimages/jolokia_agent.PNG)
+
+
+#### Run in terminal on each broker instance
+
+* Download and Install JMX jolokia Agent 
+```bash
+mkdir jolokia
+cd jolokia_agent
+wget http://search.maven.org/remotecontent?filepath=org/jolokia/jolokia-jvm/1.6.0/jolokia-jvm-1.6.0-agent.jar -O jolokia-agent.jar
+```
+
+* Edit kafka service and add line to point to jolokia agent
+```bash
+sudo nano /etc/systemd/system/broker.service
+Environment="EXTRA_ARGS=-javaagent:/home/ubuntu/prometheus/jmx_prometheus_javaagent-0.15.0.jar=8000:/home/ubuntu/prometheus/kafka-2_0_0.yml -javaagent:/home/ubuntu/jolokia_agent/jolokia-agent.jar=host=*"
+
+sudo systemctl daemon-reload
+sudo systemctl restart broker
+
+```
+* Testing jolokia
+```bash
+sudo apt install -y jq
+curl localhost:8778/jolokia/read/kafka.server:name=UnderReplicatedPartitions,type=ReplicaManager/Value | jq
+```
+![alt text](https://achong.blob.core.windows.net/gitimages/jolokia.PNG)
+
+
+#### Run in terminal where the machine you admin your kafka cluster
+
+* Generate public / private key for admin box and after copy them to brokers serverr to enable access
+```bash
+ssh-keygen
+
+# view content of public key and copy and paste onto brokers instances
+cat id_rsa.pub 
+```
+
+* 
+```bash
+
+```
 
 
 

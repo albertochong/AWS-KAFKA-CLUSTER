@@ -19,11 +19,9 @@ systemctl enable filebeat.service
 systemctl enable metricbeat.service
 ```
 
-* Edit kafka service and add line to point to java agent
-```bash
+* Configure the Cloud ID of our Elasticsearch Service deployment
 ![alt text](https://chongtech.blob.core.windows.net/chongtechgithubimages/elastic_cloudid.PNG)
 
-```
 
 * Testing and checking mettrics
 ```bash

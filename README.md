@@ -75,3 +75,9 @@ CUSTOM TCP        TCP             3000        Anywhere  Grafana
   * Install and Configuring Prometheus
   * Install and Configuring Grafana
 
+## 4. Step: Kafka Monitoring logs, metrics with Elasticksearch, kibana and beats
+  * Install and Configuring filebeat and metricbeat
+  * Configure the Cloud ID of our Elasticsearch Service deployment
+  * Enable the Kafka and System modules in Filebeat and Metricbeat
+  * Beats Setup
+  * Start your Beats
